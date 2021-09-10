@@ -1,0 +1,57 @@
+[user]
+  name = Your Name
+  email = your.email@blah
+
+[push]
+  default = simple
+
+[alias]
+  co = checkout
+  ci = commit
+  cp = cherry-pick
+  s  = status
+  clog = log --date=short --pretty=format:\"%Cred%ad %Cblue%h %Cgreen%an %Creset%s%C(yellow)%d\"
+  wlog = log --date=short --pretty=format:\"%ad %h %an %s%d\"
+  slog = log --date=short --pretty=format:\"%C(124)%ad %C(24)%h %C(34)%an %C(252)%s%C(178)%d\"
+  llog = log --date=short --format=\"%C(94)--------------------------------------------------------------------------------%n%C(24)%h %C(124)%ad %C(34)%an %C(22)<%ae>%C(130)%d%n%C(178) %s%n%n%B(1)\"
+  pullify = config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pull/*'
+  amen  = commit --amend --no-edit
+  dc    = describe  --tags --always --abbrev=8
+  fp    = format-patch -k -M -N
+
+  # folder stuff
+  root = rev-parse --show-toplevel
+  pwd  = rev-parse --show-prefix
+  exec = "!exec "
+	pushfl = push --force-with-lease
+
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  showbranch = auto
+  status = auto
+  ui = auto
+
+[color "branch"]
+  current = green
+  local = yellow
+  remote = red
+
+[color "diff"]
+  meta = yellow
+
+[color "grep"]
+  match = green
+
+[color "status"]
+  changed = yellow
+
+[core]
+  excludesfile = ~/.gitignore_global
+
+[pull]
+  ff = only
+[init]
+  defaultBranch = main
